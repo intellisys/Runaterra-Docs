@@ -14,7 +14,7 @@ Runaterra is divided into the following services:
 ![Architecture-diagram](https://i.imgsafe.org/e3cb9c883a.png)
 
 ### Dashboard (**Ekko**)
-Provides and unify web-based user interface for all Runaterra's services.
+Provides an unified web-based user interface for all Runaterra's services.
 
 ### Human Resources (**Taric**)
 Provides all functionalities relating to human resources department.
@@ -47,4 +47,4 @@ All communication between services its done through [REST](http://www.restapitut
 
 ---
 
-To learn how and where Runaterra is running services and codebase are hosted. Visit our [Hosting and Deployment](hosting-and-deployment) page. For information on how to set your environment and get to work visit our [Initial setup](Initial-Setup) page. 
+To learn how and where Runaterra is running services and codebase are hosted. Visit our [Hosting and Deployment](hosting-and-deployment) page.
