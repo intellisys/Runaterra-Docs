@@ -21,7 +21,7 @@ Services running in runnaterra can be divided into 2 logical groups:
      - [Notifications](Architecture#notifications-karma) (Karma)
      - [Authentication](Architecture#authentication-nami) (Nami)
 
-![Services-groups](/img/hosting-1.png)
+![Services-groups](/img/hosting-1.PNG)
 
 ## Codebase and deployment
 

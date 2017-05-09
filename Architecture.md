@@ -11,7 +11,7 @@ Runaterra is divided into the following services:
  - [Notifications](#notifications-karma) (**Karma**)
  - [User Authentication](#user-authentication) (**Nami**)
 
-![Architecture-diagram](img/architecture-1.png)
+![Architecture-diagram](/img/architecture-1.PNG)
 
 ### Dashboard (**Ekko**)
 Provides an unified web-based user interface for all Runaterra's services.
