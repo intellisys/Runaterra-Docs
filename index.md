@@ -1,4 +1,4 @@
-# Welcome to the Runaterra's wiki page.
+# Welcome to the Runaterra's documentation.
 
 Runaterra (formerly called Intranet) is one of many internal projects at [Intellisys D. Corp.](http://www.intellisysdcorp.com/) and provides services to the following company's departments:
 
@@ -12,8 +12,6 @@ Also, Runaterra provides a series of web API's available for other internal proj
 
 ---
 
-> **This repository** serves as an integration point for all Runaterra's repositories its intended use is for reference and building development, QA, and production environments.
+> [**This repository**](www.github.com/intellisys/runaterra) serves as an integration point for all Runaterra's repositories its intended use is for reference and building development, QA, and production environments.
 
 If you are a new developer getting into the project please visit our [Architecture](Architecture)  page.
-
- Jaime made this change

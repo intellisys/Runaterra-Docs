@@ -1,4 +1,4 @@
-Welcome to Runaterra's Standards and Guidelines page.
+# Welcome to Runaterra's Standards and Guidelines page.
 
 Here you'll find information about the **Do's** and **Don'ts** when working on this project. These rules exists to keep the code base and project history manageable while still allowing contributors to be productive.
 
@@ -64,5 +64,8 @@ Example:
 
 ## Merging to master (Releases)
 
-## 
-# Code-Style
+# Docker containers
+
+# Jenkins 
+
+# Documentation
