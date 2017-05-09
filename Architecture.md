@@ -1,4 +1,4 @@
-Welcome to Runaterra's project architecture page.
+# Welcome to Runaterra's project architecture page.
 
 In here you'll find information about Runaterra's [service oriented architecture](https://en.wikipedia.org/wiki/Service-oriented_architecture).
 
@@ -11,7 +11,7 @@ Runaterra is divided into the following services:
  - [Notifications](#notifications-karma) (**Karma**)
  - [User Authentication](#user-authentication) (**Nami**)
 
-![Architecture-diagram](https://i.imgsafe.org/e3cb9c883a.png)
+![Architecture-diagram](img/architecture-1.png)
 
 ### Dashboard (**Ekko**)
 Provides an unified web-based user interface for all Runaterra's services.

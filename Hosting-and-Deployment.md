@@ -1,42 +1,55 @@
-Welcome to our hosting and deployment page, here you'll learn most of what you need to understand how and where Runaterra is deployed. Also: 
+# Welcome to our hosting and deployment page
+
+Here you'll learn most of what you need to understand how and where Runaterra is deployed. Also: 
  - How services are distributed between hosts.
  - How they should behave in relation to external services that are managed by other teams. 
  - How is the project's codebase organized. 
+
+ > NOTE: This page contains an overview of the mentioned subjects. For more details on how every part of the project is organized visit our [Standards and Guidelines](Standards-and-Guidelines) page.
 
 If you have not read about Runaterra's architecture we recommend you to do it [here](Architecture).
 
 
 ## Services groups
 
-Services running in runnaterra can be divided into 3 logical groups:
+Services running in runnaterra can be divided into 2 logical groups:
  - **Application Front-end**
      - [Dashboard](Architecture#dashboard-ekko) (Ekko)
  - **Application Back-end** 
      - [Human Resources](Architecture#human-resources-taric) (Taric)
      - [Accounting](Architecture#accounting-teemo) (Teemo)
      - [Notifications](Architecture#notifications-karma) (Karma)
+     - [Authentication](Architecture#authentication-nami) (Nami)
 
-![Services-groups](https://i.imgsafe.org/e3ae83a0b7.png)
+![Services-groups](/img/hosting-1.png)
 
-### Services host distribution
+## Codebase and deployment
 
-![Services-groups](https://i.imgsafe.org/e396d78a54.png)
-
-### Codebase and deployment
-
+### Code Version Control  (Git and Github)
 Every service is deployed independently of all others and counts with its own repository in which it **must** contain the following files :
 
- - `README.md`: contains all documentation specific to this service. (This can be replaced with a wiki page if needed)
- - `SERVICENAME-prod-bootstrap.sh`: shell script which sets up all necessary configurations for the production environment.
- - `SERVICENAME-dev-bootstrap.sh`: shell script which sets up all necessary configurations for development.
+ - `/`
+    - `Dockerfile` (see [Docker](https://www.docker.com) documentation)
+ - `/scripts/`
+    - `start-SERVICENAME-dev.sh` 
+    - `start-SERVICENAME-qa.sh` 
+    - `start-SERVICENAME-prod.sh` 
 
-> This repository only serves as a reference central point for Runaterra's entire codebase.
+### Environment Isolation (Docker)
+In order to ensure that every service is executed optimally each one of them runs in one or more containers that are handled using [Docker](https://www.docker.com). Each container exposes a port for the end user:
 
-> Because is recommended for the development environment setup to be done using [Vagrant](https://www.vagrantup.com/) (see, [initial Setup](Initial-Setup)), bootstrap.sh files must take care of the complete installation of the environment.
+ | Port | Service|
+ | ---  | ---   |
+ | 80   | ekko  |
+ | 5010 | teemo |
+ | 5020 | nami  |
+ | 5030 | taric |
+ | 5040 | karma |
 
-### Continous integration
+ > For details of services ip go [here](https://github.com/intellisys/Runaterra/wiki).
 
-To improve the deployment process, continuous integration with [Jenkins](https://jenkins.io/) is setup for each service within a job named `runaterra_SERVICENAME(See Runaterra's [All Links]() Page). 
+### Continuous integration (Jenkins)
+To improve the deployment process, continuous integration with [Jenkins](https://jenkins.io/) is setup for each service's QA and production environment. (for more information about jenkins in Runaterra go [here](https://github.com/intellisys/Runaterra/wiki))
 
 ---
 To start setting your environment and get into work visit out [initial Setup](Initial-Setup) page.
