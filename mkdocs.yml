@@ -3,4 +3,10 @@ site_name: Runaterra
 
 pages:
     - 'Home': 'index.md'
+    - 'Architecture' : 'Architecture.md'
     - 'Standards and guidelines' : 'Standards-and-Guidelines.md'
+    - 'Standards and guidelines' : 'Standards-and-Guidelines.md'
+    - 'Standards and guidelines' : 'Standards-and-Guidelines.md'
+    - 'Services' :
+        - 'Nami' : 'services/nami.md'
+        - 'Taric' : 'services/taric.md'
