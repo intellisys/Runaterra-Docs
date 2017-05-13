@@ -1,0 +1,6 @@
+site_name: Runaterra
+
+
+pages:
+    - 'Home': 'index.md'
+    - 'Standards and guidelines' : 'Standards-and-Guidelines.md'
