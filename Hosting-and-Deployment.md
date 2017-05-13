@@ -1,4 +1,4 @@
-# Welcome to our hosting and deployment page
+Welcome to our hosting and deployment page
 
 Here you'll learn most of what you need to understand how and where Runaterra is deployed. Also: 
  - How services are distributed between hosts.
@@ -12,7 +12,7 @@ If you have not read about Runaterra's architecture we recommend you to do it [h
 
 ## Services groups
 
-Services running in runnaterra can be divided into 2 logical groups:
+Services running in runaterra can be divided into 2 logical groups:
  - **Application Front-end**
      - [Dashboard](Architecture#dashboard-ekko) (Ekko)
  - **Application Back-end** 
@@ -52,4 +52,3 @@ In order to ensure that every service is executed optimally each one of them run
 To improve the deployment process, continuous integration with [Jenkins](https://jenkins.io/) is setup for each service's QA and production environment. (for more information about jenkins in Runaterra go [here](https://github.com/intellisys/Runaterra/wiki))
 
 ---
-To start setting your environment and get into work visit out [initial Setup](Initial-Setup) page.

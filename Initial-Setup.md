@@ -30,6 +30,7 @@ Each service can be set up and executed independently of the others, but in most
  > Each deployment to the QA server should be done by **jenkins** therefore needs to be able to communicate with the server through ssh.
 
 Initial set up:
+
  1. Execute this in your command line `git clone --recursive git@github.com:intellisys/runaterra`
  2. Run the script located in the project's root`/bootstrap.sh`
  3. Checkout every submodule to its `develop` branch. This can be done running the following command `git submodule foreach git checkout develop`
@@ -43,6 +44,7 @@ Initial set up:
  > The instance of jenkins that handles jobs for both QA and production environments is executed as a docker container in the production server.
 
 Initial set up:
+
  1. Execute this in your command line `git clone --recursive git@github.com:intellisys/runaterra`
  2. Run the script located in the project's root`/bootstrap.sh`
  3. Checkout every submodule to its `develop` branch. This can be done running the following command `git submodule foreach git checkout develop`
