@@ -1,25 +1,20 @@
-# Taric (HR)
+# Taric
 
-Taric is the service in charge of managing all the employee proceses and human resources things.
+Taric is the service in charge of managing all human resources related processes.
 
-These include things like
+These include employees:
 
+* Basic information
+* Vacation days calculations
+* Salary increase
 * Medical insurance
-* Employee vacation days calculations
-* Employee salary increase
-* Handling basic employee information
 
 
-## Docker Support
-Currently you can use docker to setup the enviroment running this:
+## Setup
 
+Currently you can setup and run the service for development by executing the file `scripts/start-taric-dev.sh`
 
-run docker-compose up -d db
-run docker-compose build app
-run docker-compose run --rm app rake db:setup
-run docker-compose up -d app
-
-**WARNING**: This will re-create the database, DO NOT run in production
+**WARNING**: This script execution will re-create the database, **DO NOT** run in production
 
 
 ## Rails information
