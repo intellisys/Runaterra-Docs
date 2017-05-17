@@ -1,0 +1,15 @@
+site_name: Runaterra-Docs
+
+pages:
+    - 'Home': 'index.md'
+    - 'Architecture' : 'Architecture.md'
+    - 'Hosting and Deployment' : 'Hosting-and-Deployment.md'
+    - 'Initial Setup' : 'Initial-Setup.md'
+    - 'Standards and guidelines' : 'Standards-and-Guidelines.md'
+    - 'Services' :
+        - 'Ekko (Dashboard)' : 'services/ekko.md'
+        - 'Taric (Human Resources)' : 'services/taric.md'
+        - 'Teemo (Accounting)' : 'services/teemo.md'
+        - 'Karma (Notifications)' : 'services/karma.md'
+        - 'Nami (Authentication)' : 'services/nami.md'
+
