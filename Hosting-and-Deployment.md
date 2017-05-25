@@ -1,9 +1,9 @@
 Welcome to our hosting and deployment page
 
-Here you'll learn most of what you need to understand how and where Runaterra is deployed. Also: 
+Here you'll learn most of what you need to understand how and where Runaterra is deployed. Also:
  - How services are distributed between hosts.
- - How they should behave in relation to external services that are managed by other teams. 
- - How is the project's codebase organized. 
+ - How they should behave in relation to external services that are managed by other teams.
+ - How is the project's codebase organized.
 
  > NOTE: This page contains an overview of the mentioned subjects. For more details on how every part of the project is organized visit our [Standards and Guidelines](Standards-and-Guidelines) page.
 
@@ -15,7 +15,7 @@ If you have not read about Runaterra's architecture we recommend you to do it [h
 Services running in runaterra can be divided into 2 logical groups:
  - **Application Front-end**
      - [Dashboard](Architecture#dashboard-ekko) (Ekko)
- - **Application Back-end** 
+ - **Application Back-end**
      - [Human Resources](Architecture#human-resources-taric) (Taric)
      - [Accounting](Architecture#accounting-teemo) (Teemo)
      - [Notifications](Architecture#notifications-karma) (Karma)
@@ -31,9 +31,9 @@ Every service is deployed independently of all others and counts with its own re
  - `/`
     - `Dockerfile` (see [Docker](https://www.docker.com) documentation)
  - `/scripts/`
-    - `start-SERVICENAME-dev.sh` 
-    - `start-SERVICENAME-qa.sh` 
-    - `start-SERVICENAME-prod.sh` 
+    - `start-SERVICENAME-dev.sh`
+    - `start-SERVICENAME-qa.sh`
+    - `start-SERVICENAME-prod.sh`
 
 ### Environment Isolation (Docker)
 In order to ensure that every service is executed optimally each one of them runs in one or more containers that are handled using [Docker](https://www.docker.com). Each container exposes a port for the end user:
@@ -50,5 +50,8 @@ In order to ensure that every service is executed optimally each one of them run
 
 ### Continuous integration (Jenkins)
 To improve the deployment process, continuous integration with [Jenkins](https://jenkins.io/) is setup for each service's QA and production environment. (for more information about jenkins in Runaterra go [here](https://github.com/intellisys/Runaterra/wiki))
+
+### Docker Container dashboard-ekko
+if you want to manage the docker instance without having to access the server via SSH, you can access the Portainer service on port 9000, there you can run commands inside the container, view logs, status, server load among other things.
 
 ---
