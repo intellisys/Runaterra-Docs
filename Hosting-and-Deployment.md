@@ -49,7 +49,17 @@ In order to ensure that every service is executed optimally each one of them run
  > For details of services ip go [here](https://github.com/intellisys/Runaterra/wiki).
 
 ### Continuous integration (Jenkins)
-To improve the deployment process, continuous integration with [Jenkins](https://jenkins.io/) is setup for each service's QA and production environment. (for more information about jenkins in Runaterra go [here](https://github.com/intellisys/Runaterra/wiki))
+To improve the deployment process, continuous integration with [Jenkins](https://jenkins.io/) is setup for deployment of QA services, production services and other maintenance jobs. (Links to access to Runaterra's Jenkins can be found [here](https://github.com/intellisys/Runaterra/wiki)).
+
+Runaterra's jenkins service is running on a docker container named **jens** which is configured using Docker's `--restart unless-stopped` option  to ensure that its container is kept running. 
+
+#### Jobs:
+
+ - `SERVICE-NAME` (ekko, taric, etc...): Manually executed, these jobs make a pull the most recent changes from its respective repository's `master` branch and preform the build and st art process of its docker container/s.
+
+ - `SERVICE-NAME-qa` (ekko-qa, taric-qa, etc...): To ensure that the QA server reflects up to date changes made in development, executed periodically, these jobs make a pull the most recent changes from its respective repository's `develop` branch and preform the build and start process of its docker container/s.                                                      
+
+ - `Prune docker images - PROD/QA`: To avoid keeping old docker images unnecessarily both of these jobs run periodically to execute the command `docker image prune` on each server.
 
 ### Docker Container dashboard-ekko
 if you want to manage the docker instance without having to access the server via SSH, you can access the Portainer service on port 9000, there you can run commands inside the container, view logs, status, server load among other things.
