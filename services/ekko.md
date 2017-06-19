@@ -19,7 +19,7 @@ The base for Ekko's styles is the Vue.JS version of the template [CoreUI](http:/
 
 > Template demo [here](http://getbootstrap.com).
 
-# Dependencies
+# Notes
 
 ## [Axios](https://alligator.io/vuejs/rest-api-axios/) - (Cosuming api's)
 
