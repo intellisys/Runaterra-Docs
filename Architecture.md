@@ -1,4 +1,4 @@
-# Welcome to Runaterra's project architecture page.
+Welcome to Runaterra's project architecture page.
 
 In here you'll find information about Runaterra's [service oriented architecture](https://en.wikipedia.org/wiki/Service-oriented_architecture).
 
@@ -46,5 +46,3 @@ Provides client services with a single point of integration for managing user au
 All communication between services its done through [REST](http://www.restapitutorial.com/lessons/whatisrest.html) APIs using [JSON](http://www.json.org/) formatted requests and responses.
 
 ---
-
-To learn how and where Runaterra is running services and codebase are hosted. Visit our [Hosting and Deployment](hosting-and-deployment) page.

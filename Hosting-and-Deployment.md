@@ -1,9 +1,9 @@
-# Welcome to our hosting and deployment page
+Welcome to our hosting and deployment page
 
-Here you'll learn most of what you need to understand how and where Runaterra is deployed. Also: 
+Here you'll learn most of what you need to understand how and where Runaterra is deployed. Also:
  - How services are distributed between hosts.
- - How they should behave in relation to external services that are managed by other teams. 
- - How is the project's codebase organized. 
+ - How they should behave in relation to external services that are managed by other teams.
+ - How is the project's codebase organized.
 
  > NOTE: This page contains an overview of the mentioned subjects. For more details on how every part of the project is organized visit our [Standards and Guidelines](Standards-and-Guidelines) page.
 
@@ -12,10 +12,10 @@ If you have not read about Runaterra's architecture we recommend you to do it [h
 
 ## Services groups
 
-Services running in runnaterra can be divided into 2 logical groups:
+Services running in runaterra can be divided into 2 logical groups:
  - **Application Front-end**
      - [Dashboard](Architecture#dashboard-ekko) (Ekko)
- - **Application Back-end** 
+ - **Application Back-end**
      - [Human Resources](Architecture#human-resources-taric) (Taric)
      - [Accounting](Architecture#accounting-teemo) (Teemo)
      - [Notifications](Architecture#notifications-karma) (Karma)
@@ -31,9 +31,9 @@ Every service is deployed independently of all others and counts with its own re
  - `/`
     - `Dockerfile` (see [Docker](https://www.docker.com) documentation)
  - `/scripts/`
-    - `start-SERVICENAME-dev.sh` 
-    - `start-SERVICENAME-qa.sh` 
-    - `start-SERVICENAME-prod.sh` 
+    - `start-SERVICENAME-dev.sh`
+    - `start-SERVICENAME-qa.sh`
+    - `start-SERVICENAME-prod.sh`
 
 ### Environment Isolation (Docker)
 In order to ensure that every service is executed optimally each one of them runs in one or more containers that are handled using [Docker](https://www.docker.com). Each container exposes a port for the end user:
@@ -49,7 +49,19 @@ In order to ensure that every service is executed optimally each one of them run
  > For details of services ip go [here](https://github.com/intellisys/Runaterra/wiki).
 
 ### Continuous integration (Jenkins)
-To improve the deployment process, continuous integration with [Jenkins](https://jenkins.io/) is setup for each service's QA and production environment. (for more information about jenkins in Runaterra go [here](https://github.com/intellisys/Runaterra/wiki))
+To improve the deployment process, continuous integration with [Jenkins](https://jenkins.io/) is setup for deployment of QA services, production services and other maintenance jobs. (Links to access to Runaterra's Jenkins can be found [here](https://github.com/intellisys/Runaterra/wiki)).
+
+Runaterra's jenkins service is running on a docker container named **jens** which is configured using Docker's `--restart unless-stopped` option  to ensure that its container is kept running. 
+
+#### Jobs:
+
+ - `SERVICE-NAME` (ekko, taric, etc...): Manually executed, these jobs make a pull the most recent changes from its respective repository's `master` branch and preform the build and st art process of its docker container/s.
+
+ - `SERVICE-NAME-qa` (ekko-qa, taric-qa, etc...): To ensure that the QA server reflects up to date changes made in development, executed periodically, these jobs make a pull the most recent changes from its respective repository's `develop` branch and preform the build and start process of its docker container/s.                                                      
+
+ - `Prune docker images - PROD/QA`: To avoid keeping old docker images unnecessarily both of these jobs run periodically to execute the command `docker image prune` on each server.
+
+### Docker Container dashboard-ekko
+if you want to manage the docker instance without having to access the server via SSH, you can access the Portainer service on port 9000, there you can run commands inside the container, view logs, status, server load among other things.
 
 ---
-To start setting your environment and get into work visit out [initial Setup](Initial-Setup) page.

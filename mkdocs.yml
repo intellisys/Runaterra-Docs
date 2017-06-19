@@ -1,12 +1,12 @@
-site_name: Runaterra
-
+site_name: Runaterra-Docs
 
 pages:
     - 'Home': 'index.md'
     - 'Architecture' : 'Architecture.md'
-    - 'Standards and guidelines' : 'Standards-and-Guidelines.md'
-    - 'Standards and guidelines' : 'Standards-and-Guidelines.md'
+
+    - 'Hosting and Deployment' : 'Hosting-and-Deployment.md'
+    - 'Initial Setup' : 'Initial-Setup.md'
     - 'Standards and guidelines' : 'Standards-and-Guidelines.md'
     - 'Services' :
-        - 'Nami' : 'services/nami.md'
-        - 'Taric' : 'services/taric.md'
+        - 'Ekko (Dashboard)' : 'Ekko(Dashboard)/'
+        - 'Taric (Human Resources)' : 'Taric(HR)/'

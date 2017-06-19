@@ -60,11 +60,35 @@ To improve organization branch naming should follow the next standard.
 Example: 
  - `TSS-FILE_fixed-error-with-total-invoice-field`
 
+
 ## Pull Requests and Merging to develop
+
+Each pull request description contains the following fields:
+
+ - **STATUS**: DESCRIBE WHETHER OR NOT THE PROPOSED CHANGES ARE READY TO BE MERGED.
+ - **Description** A few sentences describing the overall goals of the pull request's commits.
+ - **Related PRs**: list related pull requests whether they are in another's service repository or correspond to this changes documentation.
+ - **Deploy Notes** Notes regarding deployment the proposed changes. These should note any db migrations, jenkins, etc. 
+
+In order for these changes to be merged into `develop` at least **one** approved review is needed. After that the branch can be merged using the **squash and merge** strategy with a message of the following format `major feature - brief change description`
+
+> NOTE: Because of the squash and merge is used to merge pull requests, there's total freedom in how to handle commits on minor feature branches.
+
 
 ## Merging to master (Releases)
 
-# Docker containers
+Releases version control follow the [Semantic Versioning](http://semver.org/) standard and must be [tagged](https://git-scm.com/book/en/v2/Git-Basics-Tagging).
+
+
+# Docker
+Any docker tool can be used for containers management. But the following must be taken into consideration:
+ - All images live under the same repository, `runaterra` and follow the convention `runaterra:SERVICENAME`.
+ - Each main container (that in which the main application is running) name must be its alias. Ex: `nami`, `ekko`.
+ - Each database container's name must be `SERVICENAME-db`. Ex: `taric-db`, `teemo-db`.
+ - Each service must define the following files.
+    - `scripts/start-SERVICENAME-dev`
+    - `scripts/start-SERVICENAME-qa`
+    - `scripts/start-SERVICENAME-prod`
 
 # Jenkins 
 
