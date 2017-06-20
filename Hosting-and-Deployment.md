@@ -64,4 +64,17 @@ Runaterra's jenkins service is running on a docker container named **jens** whic
 ### Docker Container dashboard-ekko
 if you want to manage the docker instance without having to access the server via SSH, you can access the Portainer service on port 9000, there you can run commands inside the container, view logs, status, server load among other things.
 
+### Hardware
+
+The server running all production services is described by the following table
+
+ | Data  | Description|
+ | ---  | ---   |
+ | Model | Lenovo K450e |
+ | CPU | Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz  |
+ | Memory size(RAM) | 16Gib |
+ | Hard drive size(Storage) | 1863Gib |
+ | 64 bits system    | Yes  |
+ | Serial Number | ES13881325 |
+
 ---
